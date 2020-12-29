@@ -10,7 +10,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
-" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Plug 'bling/vim-bufferline'
 
 
 call plug#end()            " required
@@ -19,7 +19,8 @@ call plug#end()            " required
 set sw=4
 set number
 set relativenumber
-set laststatus=2
+" set laststatus=2
+set noshowmode
 
 " From: https://jdhao.github.io/2019/06/06/nvim_deoplete_settings/
 let g:deoplete#enable_at_startup = 1
@@ -28,6 +29,6 @@ call deoplete#custom#option('ignore_sources', {'_': ['around', 'buffer']})
 call deoplete#custom#source('_', 'max_menu_width', 80)
 
 " Put color into lightline
-if !has('gui_running')
-  set t_Co=256
-endif
+" if !has('gui_running')
+"   set t_Co=256
+" endif
